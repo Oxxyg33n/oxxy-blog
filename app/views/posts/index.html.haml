@@ -1,6 +1,17 @@
 - @posts.each do |post|
 	= image_tag post.image_url.to_s
 	%h1
-		=link_to "post.title", post
+		.text-center
+			=link_to post.title, post
+			=post.created_at.strftime('%b %d, %Y')
+			Estimated reading time -
+			= post.content.reading_time
 	%p
-		=post.content
+		.text-center
+			=raw(post.content).truncate(358)
+	.text-center
+		=link_to "Read more", post_path(post)
+
+	= link_to "Show", post_path(post), class: "btn btn-primary"
+	= link_to "Edit", edit_post_path(post), class: "btn btn-default"
+	= link_to "Delete", post_path(post), class: "btn btn-danger", method: :delete, data: { :confirm => "Are you sure?" }
