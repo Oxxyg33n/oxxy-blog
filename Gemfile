@@ -48,11 +48,16 @@ gem 'haml'
 # Bootstrap support for RoR
 gem 'bootstrap-sass', '~> 3.3.6'
 
-# File attachment library for
-gem 'paperclip', '~> 5.0.0'
+# File attachment library for RoR
+#gem 'paperclip', '~> 5.0.0'
+
+# File attachment library for RoR
+gem 'carrierwave'
 
 # Paginating gem
 gem 'kaminari'
+
+# 
 
 # PostgreSQL
 #gem 'pg'
