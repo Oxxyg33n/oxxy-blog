@@ -6,6 +6,8 @@ Bruno Boehm for his tutorial: [Full Ruby on Rails Blog App Tutorial (Zero to Dep
 [reddit user devwalks](https://www.reddit.com/user/devwalks)
 and his [Photogram e-book](https://www.reddit.com/r/learnprogramming/comments/489tmy/ive_written_a_200_page_ebook_on_how_to_build_an/).
 
+[Kinsomicroteh user](https://scotch.io/@kinsomicroteh) for his [Ruby on Rails Blog Tutorial](ttps://scotch.io/tutorials/build-a-blog-with-ruby-on-rails-part-2)
+
 ## Getting started
 
 To get started with the app, clone the repo and then install the needed gems:
