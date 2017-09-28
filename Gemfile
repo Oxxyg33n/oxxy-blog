@@ -33,6 +33,27 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Authentication system gem
+gem 'devise'
+
+# Plugin for creating meta tags
+gem 'metamagic'
+
+# Forms made easier for RoR
+gem 'simple_form'
+
+# Templating engine for HTML
+gem 'haml'
+
+# Bootstrap support for RoR
+gem 'bootstrap-sass', '~> 3.3.6'
+
+# File attachment library for
+gem 'paperclip', '~> 5.0.0'
+
+# Paginating gem
+gem 'kaminari'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
