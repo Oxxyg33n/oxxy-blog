@@ -1,4 +1,5 @@
 class Post < ApplicationRecord
+	mount_uploader :image, ImageUploader
 	belongs_to :category
 	validates :title, :content, :category_id, presence: true
 	has_many :line_items, inverse_of: :order
