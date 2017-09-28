@@ -45,3 +45,4 @@ $ rails server
 	* [haml](https://github.com/haml/haml)
 	* [bootstrap_sass](https://github.com/twbs/bootstrap-sass)
 	* [kaminari](https://github.com/kaminari/kaminari)
+	* [readingtime](https://github.com/garethrees/readingtime)
