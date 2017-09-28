@@ -1,5 +1,16 @@
-= image_tag @post.image_url.to_s, alt: "Image", class: "img-responsive"
-= @post.title
-= @post.content
-= link_to "Edit", edit_post_path(@post)
-= link_to "Delete", @post, method: :delete, data: { confirm: "Are you sure?" }
+.container-fluid
+	.text-center
+		= image_tag @post.image_url.to_s, alt: "Image", class: "img-responsive"
+	%h1
+		.text-center
+			= @post.title
+	%br
+	.text-center
+		= @post.content
+		- if admin_signed_in?
+			= link_to "Edit", edit_post_path(@post)
+			= link_to "Delete", @post, method: :delete, data: { confirm: "Are you sure?" }
+	.text-center
+		Estimated reading time: #{@post.content.reading_time}
+		%br
+		Posted at #{@post.created_at.strftime('%b %d, %Y')}
