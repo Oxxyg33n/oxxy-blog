@@ -25,9 +25,18 @@ class PostsController < ApplicationController
 	end
 
 	def update
+		if @post.update(post_params)
+			flash[:success] = "Update successful"
+			redirect_to @post
+		else
+			render 'edit'
+		end
 	end
 
 	def destroy
+		@post.destroy
+		flash[:success] = "Successfully destroyed post"
+		redirect_to root_path
 	end
 
 	def edit
