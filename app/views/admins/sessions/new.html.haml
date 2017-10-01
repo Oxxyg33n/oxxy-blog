@@ -9,5 +9,5 @@
 		- if devise_mapping.rememberable?
 			.form-group
 				= f.input_field :remember_me, as: :boolean, inline_label: "Remember me?"
-		= f.submit :submit, class: "btn btn-primary btn-lg"
+		= f.submit :submit, value: 'Submit', class: "btn btn-primary btn-lg"
 		= render "admins/shared/links"
