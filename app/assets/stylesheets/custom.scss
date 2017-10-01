@@ -130,3 +130,59 @@ aside {
 		font-weight: 600;
 	}
 }
+
+.skills {
+	.intro {
+		margin-bottom: 30px;
+	}
+
+	.skillset {
+		.item {
+			margin-bottom: 30px;
+		}
+
+		.level-title {
+			font-size: 16px;
+			position: relative;
+			margin-top: 0;
+			margin-bottom: 10;
+
+			.level-label {
+				color: #ccd1d6;
+				font-size: 14px;
+				font-weight: 400;
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+
+			.level-bar {
+				height: 15px;
+				background: white;
+			}
+
+			.level-bar-inner {
+				height: 15px;
+				background: #66cb8c;
+			}
+		}
+	}
+}
+
+.info {
+	.fa {
+		margin-right: 15px;
+		color: #ccd1d6;
+		font-size: 14px;
+	}
+
+	a {
+		color: white;
+
+		&:hover {
+			color: rgb(58,170,100);
+		}
+	}
+
+	font-size: 13px;
+}
