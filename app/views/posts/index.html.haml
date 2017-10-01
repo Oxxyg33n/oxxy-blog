@@ -1,15 +1,16 @@
 - @posts.each do |post|
-	.container
-		= image_tag post.image_url.to_s
+	.posts-wrapper
 		%h1
 			.text-center
-				=link_to post.title, post
-		.text-center
+				=link_to post.title + " (" + post.content.reading_time + ")", post
+		.group1.col-sm-4.col-md-4
+			.glyphicon.glyphicon-time
+			Posted at
 			=post.created_at.strftime('%b %d, %Y')
-			%br
-			Estimated reading time -
-			= post.content.reading_time
-		%p
+		.group2.col-sm-4.col-md-4
+			.glyphicon.glyphicon-pencil
+				= link_to post.category.name, posts_path(category: post.category.name)
+		%p.lead
 			.text-center
 				=raw(post.content).truncate(358)
 		.text-center

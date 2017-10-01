@@ -16,4 +16,5 @@
 //= require bootstrap
 //= require bootstrap-sprockets
 //= require turbolinks
-//= require_tree 
+//= require github-activity
+//= require_tree
