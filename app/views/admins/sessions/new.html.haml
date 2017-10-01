@@ -1,14 +1,13 @@
-.col-sm-offset-4.col-sm-4.col-xs-12
+
+.container-fluid
 	%h2.text-center Log in
-
-= simple_form_for(resource, as: resource_name, :url => session_path(resource_name), html: { class: "form" }) do |f|
-	.form-group
-		= f.input :email, autofocus: true, class: "form-control", placeholder: "user@email.com"
-	.form-group
-		= f.input :password, autocomplete: "off", class: "form-control"
-	- if devise_mapping.rememberable?
+	= simple_form_for(resource, as: resource_name, :url => session_path(resource_name), html: { class: "form" }) do |f|
 		.form-group
-			= f.input_field :remember_me, as: :boolean, inline_label: "Remember me?"
-	= f.submit :submit, class: "btn btn-primary btn-lg"
-
-= render "admins/shared/links"
+			= f.input :email, autofocus: true, class: "form-control", placeholder: "user@email.com"
+		.form-group
+			= f.input :password, autocomplete: "off", class: "form-control"
+		- if devise_mapping.rememberable?
+			.form-group
+				= f.input_field :remember_me, as: :boolean, inline_label: "Remember me?"
+		= f.submit :submit, class: "btn btn-primary btn-lg"
+		= render "admins/shared/links"
