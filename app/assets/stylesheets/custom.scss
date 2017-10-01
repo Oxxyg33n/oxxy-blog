@@ -87,15 +87,34 @@ body {
 	margin-bottom: 40px;
 }
 
-aside {
-	.section {
-		margin-bottom: 30px;
-		.section-inner {
-			background: white;
-			padding: 30px;
-			h2 {
-				font-family: 'Montserrat', sans-serif;
-				font-weight: 700;
+.section {
+	&:before {
+		display: block;
+		content: " ";
+		margin-top: -140px;
+		height: 150px;
+		visibility: hidden;
+	}
+	margin-bottom: 30px;
+	.content {
+		.more-link {
+			margin-right: 5px;
+			color: rgb(58,170,100);
+			font-size: 14px;
+
+			&:hover {
+				font-size: 16px;
+				text-decoration: none;
+			}
+		}
+
+		.achievement-link {
+			margin-right: 5px;
+			font-size: 14px;
+			color: rgb(58,170,100);
+
+			&:hover {
+				font-size: 16px;
 			}
 		}
 	}
@@ -155,18 +174,18 @@ aside {
 				right: 0;
 				top: 0;
 			}
-
-			.level-bar {
-				height: 15px;
-				background: white;
-			}
-
-			.level-bar-inner {
-				height: 15px;
-				background: #66cb8c;
-			}
 		}
 	}
+}
+
+.level-bar {
+	height: 15px;
+	background: white;
+}
+
+.level-bar-inner {
+	height: 15px;
+	background: rgb(58,170,100);
 }
 
 .info {
@@ -185,4 +204,79 @@ aside {
 	}
 
 	font-size: 13px;
+}
+
+.education {
+	.item {
+		margin-bottom: 30px;
+
+		.university {
+			font-family: "Arial";
+			font-size: 13px;
+			color: rgb(58,170,100);
+			font-weight: 600;
+			padding-left: 25px;
+
+			.year {
+				color: #b0b7bf;
+				font-weight: 500;
+			}
+		}
+
+		.title {
+			font-size: 16px;
+			margin-top: 0;
+		}
+
+		&:last_child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.languages {
+	.item {
+		margin-bottom: 15px;
+
+		&:last_child {
+			margin-bottom: 0;
+		}
+
+		.title {
+			color: rgb(58,170,100);
+		}
+
+		.level {
+			color: #999;
+		}
+
+		.fa {
+			color: rgb(58,170,100);
+		}
+	}
+}
+
+.list {
+	ul {
+		li {
+			a {
+				color: rgb(58,170,100);
+			}
+		}
+	}
+}
+
+.credits {
+	ul {
+		li {
+			a {
+				color: rgb(58,170,100);
+				font-size: 14px;
+
+				&:hover {
+					font-size: 16px;
+				}
+			}
+		}
+	}
 }

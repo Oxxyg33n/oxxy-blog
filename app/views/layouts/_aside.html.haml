@@ -8,7 +8,7 @@
           %i.fa.fa-map-marker
           %span.sr-only
             Location:
-          ESTONIA, TALLINN
+          = link_to "ESTONIA, TALLINN", "https://www.google.ee/maps/place/Tallinna+linn,+Harju+County/@59.4765071,24.5978165,11z/data=!3m1!4b1!4m5!3m4!1s0x469293af0fa1e147:0x34b6fba6370d772e!8m2!3d59.4135498!4d24.7340893?hl=en"
         %li
           %i.fa.fa-envelope-o
           %span.sr-only
@@ -19,6 +19,16 @@
           %span.sr-only
             Website:
           = link_to "ØXXY.WTF", "http://oxxy.wtf/"
+        %li
+          %i.fa.fa-user-circle-o
+          %span.sr-only
+            Facebook:
+          = link_to "FACEBOOK", "https://www.facebook.com/oxxy.beatch"
+        %li
+          %i.fa.fa-telegram
+          %span.sr-only
+            Telegram:
+          = link_to "TELEGRAM", "https://t.me/oxxy_beatch"
 
 %aside#achievements.achievements.aside.section
   .section-inner
@@ -50,11 +60,35 @@
       .skillset
         .item
           %h3.level-title
+            SASS
+            %span.level-label
+              Professional
+            .level-bar
+              .level-bar-inner{"data-level" => "70%", :style => "width:70%;"}
+
+        .item
+          %h3.level-title
+            HAML
+            %span.level-label
+              Intermediate
+            .level-bar
+              .level-bar-inner{"data-level" => "60%", :style => "width:60%;"}
+
+        .item
+          %h3.level-title
+            Ruby on Rails
+            %span.level-label
+              Intermediate
+          .level-bar
+            .level-bar-inner{"data-level" => "40%", :style => "width: 40%;"}
+
+        .item
+          %h3.level-title
             Ruby
             %span.level-label
               Beginner
-          .level-bar
-            .level-bar-inner{"data-level" => "20%", :style => "width: 20%;"}
+            .level-bar
+              .level-bar-inner{"data-level" => "30%", :style => "width: 30%;"}
 
         .item
           %h3.level-title
@@ -97,10 +131,10 @@
       %ul.list-unstyled
         %li.item
           %span.title
-            %strong Russian
+            %strong Russian:
           %span.level
             Native Speaker
-            %br.visible-xs
+            %br
             %i.fa.fa-star
             %i.fa.fa-star
             %i.fa.fa-star
@@ -109,10 +143,10 @@
 
         %li.item
           %span.title
-            %strong English
+            %strong English:
           %span.level
             Full professional proficiency
-            %br.visible-xs
+            %br
             %i.fa.fa-star
             %i.fa.fa-star
             %i.fa.fa-star
@@ -120,10 +154,10 @@
 
         %li.item
           %span.title
-            %strong Estonia
+            %strong Estonian:
           %span.level
             Elementary proficiency
-            %br.visible-xs
+            %br
             %i.fa.fa-star
             %i.fa.fa-star
 
@@ -150,16 +184,23 @@
     .content
       %ul.list-unstyled
         %li
+          %i.fa.fa-external-link
           = link_to "Ruby", "https://www.ruby-lang.org/en/"
         %li
+          %i.fa.fa-external-link
           = link_to "Ruby on Rails", "http://rubyonrails.org/"
         %li
+          %i.fa.fa-external-link
           = link_to "Andres.wtf", "https://andres.wtf/"
         %li
+          %i.fa.fa-external-link
           = link_to "FontAwesome", "http://fontawesome.io/"
         %li
+          %i.fa.fa-external-link
           = link_to "jQuery", "http://jquery.com/"
         %li
+          %i.fa.fa-external-link
           = link_to "Bootstrap", "http://getbootstrap.com/"
         %li
+          %i.fa.fa-external-link
           = link_to "GitHub Activity Stream", "http://caseyscarborough.com/projects/github-activity/"
