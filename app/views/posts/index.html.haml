@@ -1,22 +1,29 @@
 - @posts.each do |post|
 	.posts-wrapper
-		%h1
-			.text-center
-				=link_to post.title + " (" + post.content.reading_time + ")", post
-		.group1.col-sm-4.col-md-4
+		.post
+			%span.post_title
+				=link_to post.title, post
+				= link_to posts_path(category: post.category.name), class: "category_name" do
+					(
+					.glyphicon.glyphicon-pencil
+					= post.category.name
+					)
+				.post
+			%span.post_reading_time
+				Read in:
+				= post.content.reading_time
+		.post.posted_at
 			.glyphicon.glyphicon-time
 			Posted at
 			=post.created_at.strftime('%b %d, %Y')
-		.group2.col-sm-4.col-md-4
-			.glyphicon.glyphicon-pencil
-				= link_to post.category.name, posts_path(category: post.category.name)
-		%p.lead
-			.text-center
-				=raw(post.content).truncate(358)
-		.text-center
-			=link_to "Read more", post_path(post)
-		- if admin_signed_in?
-			.col-md-3.col-md-offset-10
-				= link_to "Show", post_path(post), class: "btn btn-primary"
-				= link_to "Edit", edit_post_path(post), class: "btn btn-default"
-				= link_to "Delete", post_path(post), class: "btn btn-danger", method: :delete, data: { :confirm => "Are you sure?" }
+			%span.content_text
+				.text-center
+					=raw(post.content).truncate(500)
+		.post
+			%span.read_more
+				.text-right
+					=link_to "Read more", post_path(post), class: "btn btn-primary"
+					- if admin_signed_in?
+						= link_to "Show", post_path(post), class: "btn btn-primary"
+						= link_to "Edit", edit_post_path(post), class: "btn btn-default"
+						= link_to "Delete", post_path(post), class: "btn btn-danger", method: :delete, data: { :confirm => "Are you sure?" }
