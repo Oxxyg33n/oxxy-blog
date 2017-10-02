@@ -8,22 +8,20 @@
 					.glyphicon.glyphicon-pencil
 					= post.category.name
 					)
-				.post
 			%span.post_reading_time
 				Read in:
 				= post.content.reading_time
-		.post.posted_at
+		.posted_at
 			.glyphicon.glyphicon-time
 			Posted at
 			=post.created_at.strftime('%b %d, %Y')
+		.post
 			%span.content_text
 				.text-center
 					=raw(post.content).truncate(500)
-		.post
 			%span.read_more
 				.text-right
 					=link_to "Read more", post_path(post), class: "btn btn-primary"
 					- if admin_signed_in?
-						= link_to "Show", post_path(post), class: "btn btn-primary"
 						= link_to "Edit", edit_post_path(post), class: "btn btn-default"
 						= link_to "Delete", post_path(post), class: "btn btn-danger", method: :delete, data: { :confirm => "Are you sure?" }
